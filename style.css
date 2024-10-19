@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f3e6f5;  /* Soft light lavender background */
+    color: #5e4b71;  /* Slightly darker purple for text */
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items:stretch;
+    padding: 20px 10%;
+    background-color: #b38cb4;  /* Medium purple */
+    color: #fff;  /* White text color */
+}
+
+nav .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav .menu a {
+    color: #fff;  /* White text for nav links */
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+nav .menu a:hover {
+    color: #e0c3fc;  /* Light pastel hover effect on nav links */
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 10%;
+}
+
+
+.left img {
+    width: 100%;
+    border-radius: 10px;
+    animation: zoomInOut 6s ease-in-out infinite; 
+}
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1);  /* Normal size */
+    }
+    50% {
+        transform: scale(1.15);  /* Zoom in by 15% */
+    }
+    100% {
+        transform: scale(1);  /* Back to normal size */
+    }
+}
+.right {
+    max-width: 500px;
+}
+
+.right h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #6d477d;  /* Darker shade for heading */
+}
+
+.right p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.right button {
+    padding: 10px 30px;
+    background-color: #6d477d;  /* Dark purple button */
+    color: #fff;  /* White text color */
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+.right button:hover {
+    background-color: #d6a9e3;  /* Light purple hover for button */
+}
+
+/* Swiper Styling */
+.swiper {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 50px;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #d6a9e3;  /* Light purple navigation buttons */
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #d6a9e3;  /* Light purple active pagination dot */
+}
+
+/* Featured Section */
+#featured {
+    padding: 50px 10%;
+    background-color: #f3e6f5;
+}
+
+#featured h1 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #6d477d;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.box1 {
+    width: 200px;
+    margin-bottom: 30px;
+    text-align: center;
+    background-color: #e8d2ff;  /* Light lavender box background */
+    padding: 15px;
+    border-radius: 10px;
+}
+/* For product hover zoom effect */
+.box1 img, .man-box img {
+    transition: transform 0.3s ease-in-out;  /* Smooth zoom effect */
+}
+
+.box1:hover img, .man-box:hover img {
+    transform: scale(1.1);  /* Zoom the image by 10% */
+}
+
+.box1 img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.price {
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #6d477d;  /* Darker purple for price */
+}
+
+/* Men and Women Sections */
+.man-row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 50px 10%;
+    background-color: #f7ebfc;
+}
+
+.man-box {
+    width: 200px;
+    margin-bottom: 30px;
+    text-align: center;
+    background-color: #e8d2ff;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.man-box img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.man-box h2 {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #6d477d;
+}
+
+.man-box h3 {
+    margin-top: 5px;
+    font-size: 1em;
+    color: #5e4b71;
+    cursor: pointer;
+}
+
+.man-box h3:hover {
+    color: #d6a9e3;  /* Light purple hover on add to cart */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #b38cb4;  /* Medium purple for footer */
+    color: #fff;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Responsive Adjustments */
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .left, .right {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav .menu {
+        display: none;
+    }
+
+    #featured, .man-row {
+        padding: 20px;
+    }
+
+    .box1, .man-box {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+footer {
+    background-color: #5e4b8d;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 0 0 15px rgba(187, 115, 216, 0.7); /* Soft purple glow */
+    text-shadow: 0 0 5px rgba(195, 135, 219, 0.7); /* Soft pinkish glow on text */
+    transition: box-shadow 0.3s ease, text-shadow 0.3s ease; /* Smooth glowing effect */
+    
+    }
+    
+    footer:hover {
+    box-shadow: 0 0 25px rgba(187, 115, 216, 1); /* Stronger glow on hover */
+    text-shadow: 0 0 10px rgba(195, 135, 219, 1); /* Stronger text glow on hover */
+    }
